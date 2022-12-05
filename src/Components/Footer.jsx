@@ -1,12 +1,14 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import Navbar from './Navbar'
 
+// TODO: el botón de volver al principio no funciona
 const Footer = () => {
-  const navigate = useNavigate();
-
+  const scrollToTop = () => {
+    Element.scrollTo(Navbar)
+  }
   return (
     <footer>
-      <button onClick={() => navigate("/")}>Volver al principio</button> 
+      <button onClick={{scrollToTop}}>Volver al principio</button> 
       <div className='container-icons'>
         <img src="./images/DH.png" alt='DH-logo' />
         <img src='./images/ico-facebook.png' alt="Icono de Facebook"/>
