@@ -8,7 +8,7 @@ const Footer = () => {
   }
   return (
     <footer>
-      <button onClick={{scrollToTop}}>Volver al principio</button> 
+      <button onClick={{scrollToTop}}>Scroll to up</button> 
       <div className='container-icons'>
         <img src="./images/DH.png" alt='DH-logo' />
         <img src='./images/ico-facebook.png' alt="Icono de Facebook"/>
