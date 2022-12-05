@@ -40,7 +40,7 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 
-footer {
+.container-icons {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -52,7 +52,7 @@ footer {
   margin-top: 2rem;
 }
 
-footer > img{
+.container-icons > img{
   width: 200px;
   margin: 0;
 }

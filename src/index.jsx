@@ -4,16 +4,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import App from './App';
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 import { Contact } from './Routes/Contact'
 import { Detail } from "./Routes/Detail";
 import { Favs } from "./Routes/Favs";
 import { Home } from "./Routes/Home";
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
   <React.StrictMode>
     <BrowserRouter>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<App/>} />
         <Route path="/contact" element={<Contact/>} />
@@ -21,7 +24,8 @@ root.render(
         <Route path="/favs" element={<Favs/>} />
         <Route path="/home" element={<Home/>} />
       </Routes>
-      </BrowserRouter>
+      <Footer/>
+    </BrowserRouter>
   </React.StrictMode>
 
 );
