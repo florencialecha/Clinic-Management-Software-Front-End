@@ -1,4 +1,4 @@
-import { findRouteByTitle } from "./GeneralRoutes";
+import { findRouteByTitle } from "./AllRoutes";
 
 export const navBar = [
     findRouteByTitle('Home'),
