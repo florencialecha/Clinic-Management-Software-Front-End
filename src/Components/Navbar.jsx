@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { navBar } from '../Routes/Routes'
+import { navBar } from '../Routes/NavBarRoutes'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 

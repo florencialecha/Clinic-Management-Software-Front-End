@@ -16,11 +16,7 @@ export const generalRoutes = [
     { id: 5, path: "/dentist/:id", Element: Detail, title: "Dentist Detail" }
   ]
   
-export const navBar = [
-  findRouteById(2),
-  findRouteById(3),
-  findRouteById(4),
-]
+
 
 
 //   export const socialNetwork = [
