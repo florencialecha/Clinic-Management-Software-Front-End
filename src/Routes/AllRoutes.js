@@ -16,6 +16,6 @@ export const internalRoutes = [
   { id: 5, path: "/dentist/:id", Element: Detail, title: "Dentist Detail" }
 ];
 
-//   export const socialNetwork = [
-//     { linkto: "www.google.com", snTitle: "Google", Icon: GoogleIcon }
-//   ]
+export const externalRoutes = [
+  { linkto: "www.google.com", snTitle: "Google", Icon: 'GoogleIcon' }
+];
