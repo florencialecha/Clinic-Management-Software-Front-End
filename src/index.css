@@ -121,3 +121,10 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+
+/* css para pruebas */
+
+.card-img {
+  width: 100%;
+  height: 100%;
+}
