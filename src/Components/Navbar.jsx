@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav>
       <div className='container'>
         {/* TODO: Estilos para el logo DH Odonto */}
-        <Link to="/home">DH Odonto</Link>
+        <Link to="/">DH Odonto</Link>
       </div>
       <ul>
         <li>

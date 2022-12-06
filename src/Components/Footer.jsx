@@ -1,14 +1,9 @@
 import React from 'react'
-import Navbar from './Navbar'
 
-// TODO: el botón de volver al principio no funciona
 const Footer = () => {
-  const scrollToTop = () => {
-    Element.scrollTo(Navbar)
-  }
   return (
     <footer>
-      <button onClick={{scrollToTop}}>Scroll to up</button> 
+      <a href="#top">Scroll to up</a>
       <div className='container-icons'>
         <img src="./images/DH.png" alt='DH-logo' />
         <img src='./images/ico-facebook.png' alt="Icono de Facebook"/>
