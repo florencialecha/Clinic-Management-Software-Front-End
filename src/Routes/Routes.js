@@ -7,9 +7,10 @@ import { Home } from './Home';
 
 export const routes = [
     { id: 1, path: "/", Element: Home, title: "Home" },
-    { id: 2, path: "/contact", Element: Contact, title: "Contact" },
-    { id: 3, path: "/favs", Element: Favs, title: "Contact" },
-    { id: 4, path: "/dentist/:id", Element: Detail, title: "Dentist Detail" }
+    { id: 2, path: "/home", Element: Home, title: "Home" },
+    { id: 3, path: "/contact", Element: Contact, title: "Contact" },
+    { id: 4, path: "/favs", Element: Favs, title: "Contact" },
+    { id: 5, path: "/dentist/:id", Element: Detail, title: "Dentist Detail" }
   ]
   
 //   export const socialNetwork = [
