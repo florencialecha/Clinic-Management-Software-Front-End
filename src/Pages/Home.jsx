@@ -9,7 +9,7 @@ export const Home = () => {
       <h1>Home</h1>
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}
-        <Card/>
+        <Card id={2} name={'Flor'} username={'Flecha'}/>
       </div>
     </main>
   )
