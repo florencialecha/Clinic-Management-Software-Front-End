@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { routes } from './Routes/Routes'
+import { internalRoutes } from './Routes/AllRoutes'
 import { App } from './App'
 
 const AppRouter = () => {
@@ -8,7 +8,7 @@ const AppRouter = () => {
       <BrowserRouter>
         <Routes>
           <Route element={<App/>}>
-            {routes.map(({ id, path, Element }) => (<Route key={id} path={path} element={<Element/>}/>))}
+            {internalRoutes.map(({ id, path, Element }) => (<Route key={id} path={path} element={<Element/>}/>))}
           </Route>
         </Routes>
       </BrowserRouter>
