@@ -1,14 +1,13 @@
-import axios from 'axios';
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router'
-
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 export const Detail = () => {
 
-  const { id } = useParams();
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
+  const { id } = useParams();
 
   const [ data, setData ] = useState();
 

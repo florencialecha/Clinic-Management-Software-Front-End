@@ -1,8 +1,15 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 export const Favs = () => {
+
+  /*const [ favs, setFavs ] = useState([]);
+
+  useEffect(() => {
+
+  });*/
 
   return (
     <>
