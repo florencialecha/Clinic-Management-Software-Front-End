@@ -15,7 +15,7 @@ export const Detail = () => {
   useEffect(() => {
     axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
       .then((res) => setData(res.data))
-  });
+  }, []);
 
   if (!data) {
     return;

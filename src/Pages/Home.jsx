@@ -10,15 +10,11 @@ export const Home = () => {
 
   const { data, setData } = useContext(ContextGlobal);
 
-  console.log("HOME");
-
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/users")
       .then(res => setData(res.data));
   }, []);
 
-  console.log(data);
-  
   return (
     <main className="">
       <h1>Home</h1>
