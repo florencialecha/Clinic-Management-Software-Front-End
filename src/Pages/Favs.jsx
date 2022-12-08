@@ -18,7 +18,7 @@ export const Favs = () => {
       <h1>Dentists Favs</h1>
       <div className="card-grid">
         {
-          favs.map((fav) => <Card name={fav.name} username={fav.username} id={fav.id} kay={fav.id} />)
+          favs.map((fav) => <Card name={fav.name} username={fav.username} id={fav.id} key={fav.id} />)
         }
       </div>
     </>
