@@ -5,20 +5,29 @@ import { findRouteByTitle } from "../Routes/AllRoutes";
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 const Card = ({ id, name, username }) => {
 
-  const [favs, setFavs] = useState([]);
+  /*const [favs, setFavs] = useState([]);
 
   useEffect(() => {
     const existingValue = localStorage.getItem('Dentist')
     if (existingValue !== null) {
       setFavs(existingValue);
     }
-  }, [favs]); 
-
+  }, [favs]); */
 
   const addFav = () => {
-    setFavs({id, name, username})
+    let favs = JSON.parse(localStorage.getItem('Dentist'));
+    if (!favs) {
+      favs = [];
+    }
+    console.log(favs);
+    favs.push({
+      id: id,
+      name: name,
+      username: username
+    });
     localStorage.setItem('Dentist', JSON.stringify(favs));
-    console.log('Debería renderizar' + favs);
+
+    console.log(favs);
   }
   
 
