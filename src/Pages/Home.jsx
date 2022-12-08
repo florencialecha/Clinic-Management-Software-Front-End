@@ -5,6 +5,7 @@ import Card from '../Components/Card'
 import { ContextGlobal } from '../Components/utils/global.context'
 
 import Container from '@mui/material/Container';
+import Grid from '@mui/material/Unstable_Grid2';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -21,11 +22,13 @@ export const Home = () => {
     <main>
       <h1>Home</h1>
       <Container>
-        {
-          data.map((item) => {
-            return <Card name={item.name} username={item.username} id={item.id} key={item.id} />
-          })
-        }
+        <Grid container spacing={5}>
+          {
+            data.map((item) => {
+              return <Card name={item.name} username={item.username} id={item.id} key={item.id} />
+            })
+          }
+        </Grid>
       </Container>
     </main>
   )
