@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const Card = ({ name, username}) => {
+const Card = ({ name, username, id }) => {
 
 // - La grilla deberá mostrar una [Card](/src/Components/Card.jsx) por cada dentista devuelto por la API.
 // - Cada dentista deberá contener `name` y `username`, junto con un boton `ADD FAV` (para agregar al localStorage como fav) y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
@@ -12,11 +12,10 @@ const Card = ({ name, username}) => {
     // Aqui iria la logica para agregar la Card en el localStorage
   }
 
-  let id = 2;
   return (
     <div className="card">
       <img src="./images/doctor.jpg" alt="Doctor" className="card-img"/>
-      <Link to={'/dentist/$id'}>{name}nombre</Link>
+      <Link to={`/dentist/${id}`}>{name}nombre</Link>
       <h4>{username}</h4>
 
         {/* En cada card deberan mostrar en name - username y el id */}
