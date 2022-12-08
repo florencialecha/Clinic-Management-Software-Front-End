@@ -1,22 +1,29 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect } from 'react'
+import { useContext } from 'react'
 import Card from '../Components/Card'
+import { ContextGlobal } from '../Components/utils/global.context'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
-export const Home = (data) => {
+export const Home = () => {
+
+  const { data, setData } = useContext(ContextGlobal);
+
+  useEffect(() => {
+    axios.get("https://jsonplaceholder.typicode.com/users")
+      .then(res => setData(res.data));
+  }, []);
+
   return (
-    <main className="" >
+    <main className="">
       <h1>Home</h1>
       <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
-
-        {/* {data.map((dentist) => {
-          return (<Card key={dentist.id} id={dentist.id} name={dentist.name} username={dentist.username} />)
+        {
+          data.map((item) => {
+            return <Card name={item.name} username={item.username} id={item.id} key={item.id} />
           })
-        } */}
-
-      <Card key={2} id={2} name={'Florencia'} username={'Flecha'} />
-
+        }
       </div>
     </main>
   )
