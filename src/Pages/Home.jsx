@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useContext } from 'react'
-import Card from '../Components/Card'
+import Card from '../Components/Common/Card'
 import { ContextGlobal } from '../Components/utils/global.context'
 
 import Container from '@mui/material/Container';

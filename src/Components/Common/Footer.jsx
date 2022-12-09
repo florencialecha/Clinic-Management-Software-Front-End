@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { footer } from '../Routes/FooterItems'
+import { footer } from '../../Routes/FooterItems'
 
 import AppBar from'@mui/material/AppBar'
 import Box from '@mui/material/Box';

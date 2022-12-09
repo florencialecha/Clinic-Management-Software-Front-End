@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { addFav } from "../Components/utils/Storage";
+import { addFav } from "../utils/Storage";
 
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';

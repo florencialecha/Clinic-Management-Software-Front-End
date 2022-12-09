@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { getFavs } from "../Components/utils/Storage";
 
-import Card from "../Components/Card";
+import Card from "../Components/Common/Card";
 
 import Grid from '@mui/system/Unstable_Grid';
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from '../Components/Form'
+import Form from '../Components/Common/Form'
 
 import Grid from '@mui/system/Unstable_Grid';
 
