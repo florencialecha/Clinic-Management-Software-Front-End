@@ -1,17 +1,36 @@
 import React from 'react'
 
+import { footer } from '../Routes/FooterItems'
+
+import AppBar from'@mui/material/AppBar'
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import ListItem from '@mui/material/ListItem';
+
 const Footer = () => {
   return (
-    <footer>
-      <a href="#top">Scroll to up</a>
-      <div className='container-icons'>
-        <img src="./images/DH.png" alt='DH-logo' />
-        <img src='./images/ico-facebook.png' alt="Icono de Facebook"/>
-        <img src="./images/ico-instagram.png" alt="Icono de Instagram"/>
-        <img src="./images/ico-whatsapp.png" alt="Icono de Whatsapp"/>
-        <img src="./images/ico-tiktok.png" alt="Icono de Tiktok"/>
-      </div>
-    </footer>
+    <AppBar position="static">
+      <Toolbar variant="dense">
+        <Box>
+          <a href="#top">Scroll to up</a>
+        </Box>
+        <img src="./images/DH.png" alt='DH-logo' className='img-logo-dh' />
+        <ListItem>
+          
+          <Box>
+            {footer.map((item) => (
+              <BottomNavigationAction 
+                key={item.id} 
+                label={item.label} 
+                href={item.route} 
+                icon={item.Icon} 
+              />
+            ))}
+          </Box>
+        </ListItem>
+      </Toolbar>
+    </AppBar>
   )
 }
 

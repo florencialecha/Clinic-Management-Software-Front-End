@@ -20,7 +20,7 @@ const Card = ({ id, name, username }) => {
   return (
     <Grid item xs={3}>
       <Box border={0.5} padding={0.5}>
-        <img src="./images/doctor.jpg" alt="Doctor" className="img"/>
+        <img src="./images/doctor.jpg" alt="Doctor" className="img-card"/>
         <Link to={`/dentist/${id}`}>{name}nombre</Link>
         <h4>{username}</h4>
         <button onClick={handleClick} className="favButton">⭐ Add fav</button>
