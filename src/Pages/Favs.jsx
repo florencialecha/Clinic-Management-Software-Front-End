@@ -5,6 +5,8 @@ import { getFavs } from "../Components/utils/Storage";
 
 import Card from "../Components/Card";
 
+import Grid from '@mui/system/Unstable_Grid';
+
 export const Favs = () => {
 
   const [ favs, setFavs ] = useState([]);
@@ -14,13 +16,19 @@ export const Favs = () => {
   }, []);
 
   return (
-    <>
+    <Grid>
       <h1>Dentists Favs</h1>
-      <div className="card-grid">
+      <Grid container spacing={5}>
         {
-          favs.map((fav) => <Card name={fav.name} username={fav.username} id={fav.id} key={fav.id} />)
+          favs.map((fav) => 
+            <Card 
+              key={fav.id}
+              id={fav.id} 
+              name={fav.name} 
+              username={fav.username} 
+            />)
         }
-      </div>
-    </>
+      </Grid>
+    </Grid>
   );
 };

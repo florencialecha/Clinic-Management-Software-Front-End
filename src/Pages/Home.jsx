@@ -19,7 +19,7 @@ export const Home = () => {
   }, []);
 
   return (
-    <main>
+    <Grid>
       <h1>Home</h1>
       <Container>
         <Grid container spacing={5}>
@@ -30,6 +30,6 @@ export const Home = () => {
           }
         </Grid>
       </Container>
-    </main>
+    </Grid>
   )
 }
