@@ -6,6 +6,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { Button, Link, Typography } from "@mui/material";
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import Stack from '@mui/material/Stack';
+import { Box } from "@mui/system";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 const Card = ({ id, name, username }) => {
@@ -19,19 +20,13 @@ const Card = ({ id, name, username }) => {
   }
 
   return (
-    <Grid 
-      item 
-      xs={3}
-      border={0.5}
-      padding={1}
-    >
-        <img src="./images/doctor.jpg" alt="Doctor" className="img-card"/>
-        <Grid 
-          container
-          flexDirection={'column'}
-          justifyContent={'center'}
-          borderColor={'secondary'}
-        >
+    <Box sx={{p: 1, backgroundColor: 'primary.main', borderWidth: 1, borderColor: 'info.main', borderStyle: 'solid'}}>
+      <img src="./images/doctor.jpg" alt="Doctor" className="img-card" style={{width: '100%'}} />
+      <Grid
+        container
+        flexDirection={'column'}
+        justifyContent={'center'}
+      >
         <Typography align='center'>
           <Link href={`/dentist/${id}`} variant="subtitle" color="secondary">{name}</Link>
         </Typography>
@@ -44,7 +39,7 @@ const Card = ({ id, name, username }) => {
           </Button>
         </Stack>
       </Grid>
-    </Grid>
+    </Box>
   );
 };
 

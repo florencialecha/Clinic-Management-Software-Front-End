@@ -22,17 +22,17 @@ const Footer = () => {
           </Button>
         </Box>
         <Toolbar disableGutters>
-          <img src="./images/DH.png" alt='DH-logo' className='img-logo-dh' />
+          <img src="./images/DH.png" alt='DH-logo' className='img-logo-dh' style={{width: '30%'}} />
         </Toolbar>
         <ListItem>
           
           <Box>
             {footer.map((item) => (
-              <BottomNavigationAction 
-                key={item.id} 
-                label={item.label} 
-                href={item.route} 
-                icon={item.Icon} 
+              <BottomNavigationAction
+                key={item.id}
+                label={item.label}
+                href={item.route}
+                icon={item.Icon}
               />
             ))}
           </Box>
@@ -42,4 +42,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;
