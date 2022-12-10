@@ -2,14 +2,16 @@
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./Components/Common/Navbar";
 import Footer from "./Components/Common/Footer";
-import Grid from '@mui/system/Unstable_Grid';
+import { ThemeSwitcher } from "./Theme/ThemeSwitcher";
 
 export function App() {
   return (
-      <Grid>
+    <ThemeSwitcher>
+      <>
         <Navbar/>
         <Outlet/>
         <Footer/>
-      </Grid>
+      </>
+    </ThemeSwitcher>
   );
 }

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import { addFav } from "../utils/Storage";
 
 import Grid from '@mui/material/Unstable_Grid2';
-import { Button, Tab, Typography } from "@mui/material";
+import { Button, Link, Typography } from "@mui/material";
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import Stack from '@mui/material/Stack';
 
@@ -33,16 +32,18 @@ const Card = ({ id, name, username }) => {
           justifyContent={'center'}
           borderColor={'secondary'}
         >
-          <Tab href={`/dentist/${id}`} label={name} showLabel={true}/>
-          <Typography variant='subtitile' textAlign={'center'}>
-            {username}
-          </Typography>
-          <Stack direction="row" spacing={2}>
-            <Button variant="outlined" startIcon={<StarBorderIcon />} color={'secondary'} >
-              ADD FAV
-            </Button>
-          </Stack>
-        </Grid>
+        <Typography align='center'>
+          <Link href={`/dentist/${id}`} variant="subtitle" color="secondary">{name}</Link>
+        </Typography>
+        <Typography variant='subtitile' textAlign={'center'}>
+          {username}
+        </Typography>
+        <Stack direction="row" spacing={2}>
+          <Button variant="outlined" startIcon={<StarBorderIcon />} color={'secondary'} >
+            ADD FAV
+          </Button>
+        </Stack>
+      </Grid>
     </Grid>
   );
 };

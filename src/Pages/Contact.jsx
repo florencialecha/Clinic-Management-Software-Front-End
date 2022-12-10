@@ -18,7 +18,6 @@ export const Contact = () => {
     >
       <Paper 
         variant="outlined"
-        borderColor={red}
         margin={10}
       >
         <Typography 
