@@ -3,26 +3,31 @@ import { Detail } from '../Pages/Detail';
 import { Favs } from '../Pages/Favs';
 import { Home } from '../Pages/Home';
 
-// import GoogleIcon from '@mui/icons-material/Google';
 
-export const findRouteById = (id) => internalRoutes.find((route) => route.id === id); 
-export const findRouteByTitle = (title) => internalRoutes.find((route) => route.title === title); 
+import HomeIcon from '@mui/icons-material/Home';
+import EmailIcon from '@mui/icons-material/Email';
+import GradeIcon from '@mui/icons-material/Grade';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+
+export const findInternalRouteByLabel = (label) => internalRoutes.find((route) => route.label === label); 
+export const findExternalRouteByLabel = (label) => externalRoutes.find((route) => route.label === label); 
 
 export const internalRoutes = [
-  { id: 1, path: "/", Element: Home, title: "Index" },
-  { id: 2, path: "/home", Element: Home, title: "Home" },
-  { id: 3, path: "/contact", Element: Contact, title: "Contact" },
-  { id: 4, path: "/favs", Element: Favs, title: "Favs" },
-  { id: 5, path: "/dentist/", Element: Detail, title: "DentistBy" },
-  { id: 5, path: "/dentist/:id", Element: Detail, title: "DentistById" }
+  { id: 1, path: "/", Icon: <HomeIcon />, Element: Home, label: "Index" },
+  { id: 2, path: "/home", Icon: <HomeIcon />, Element: Home, label: "Home" },
+  { id: 3, path: "/contact", Icon: <EmailIcon />, Element: Contact, label: "Contact" },
+  { id: 4, path: "/favs", Icon: <GradeIcon />, Element: Favs, label: "Favs" },
+  { id: 5, path: "/dentist/", Icon:'', Element: Detail, label: "DentistBy" },
+  { id: 5, path: "/dentist/:id", Icon: '', Element: Detail, label: "DentistById" }
 ];
 
 export const externalRoutes = [
-  { linkto: "www.google.com", snTitle: "Google", Icon: 'GoogleIcon' }
+  { id: 1, icon: <FacebookIcon />, label: 'Facebook', route: 'https://www.facebook.com/', },
+  { id: 2, icon: <InstagramIcon />, label: 'Instagram', route: 'https://www.instagram.com/', },
+  { id: 3, icon: <WhatsAppIcon />, label: 'WhatsApp', route: 'https://www.whatsapp.com/', },
+  { id: 4, icon: <MusicNoteIcon />, label: 'TikTok', route: 'https://www.tiktok.com/en/', },
+  { id: 5, icon: '', label: 'DigitalHouse', route: 'https://www.digitalhouse.com/', },
 ];
-
-// {/* <img src="./images/DH.png" alt='DH-logo' />
-// <img src='./images/ico-facebook.png' alt="Icono de Facebook"/>
-// <img src="./images/ico-instagram.png" alt="Icono de Instagram"/>
-// <img src="./images/ico-whatsapp.png" alt="Icono de Whatsapp"/>
-// <img src="./images/ico-tiktok.png" alt="Icono de Tiktok"/> */}

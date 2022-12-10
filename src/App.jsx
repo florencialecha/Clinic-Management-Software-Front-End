@@ -1,14 +1,15 @@
 
 import { Outlet } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
+import { Navbar } from "./Components/Common/Navbar";
+import Footer from "./Components/Common/Footer";
+import Grid from '@mui/system/Unstable_Grid';
 
 export function App() {
   return (
-      <div className="App">
+      <Grid>
         <Navbar/>
         <Outlet/>
         <Footer/>
-      </div>
+      </Grid>
   );
 }
