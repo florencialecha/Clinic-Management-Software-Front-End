@@ -21,7 +21,7 @@ const Footer = () => {
       >
         <Grid 
           item
-          width={'100%'}
+          // width={'100%'}
         >
           <Button 
             variant='red-btn'
