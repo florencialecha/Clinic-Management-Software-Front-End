@@ -1,67 +1,74 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
 import { navBar } from '../../Routes/NavBarItems'
 
 import AppBar from'@mui/material/AppBar'
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import ListItem from '@mui/material/ListItem';
 import Toolbar from '@mui/material/Toolbar';
 
-import { Grid, IconButton, Typography } from "@mui/material";
-import { Brightness4 as LightIcon } from "@mui/icons-material";
-import { useScrollTrigger } from '@mui/material';
-
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-
-
-
-function ElevationScroll(props) {
-  const { children, window } = props;
-
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-    target: window ? window() : undefined,
-  });
-
-  return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0,
-  });
-}
+import { Button, IconButton, Typography, Link } from "@mui/material";
+import { LightMode as LightIcon, DarkMode as DarkIcon } from "@mui/icons-material";
+import { useContext } from 'react';
+import { ContextGlobal } from '../utils/global.context';
+import { Box } from '@mui/system';
 
 // Para que empuje el contenido del siguiente elemento y no lo tape.
 
 export const Navbar = () => {
 
+  const { theme, setTheme } = useContext(ContextGlobal);
+
+  const switchTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
  return (
-  <ElevationScroll>
-      <AppBar position="fixed">
-        <Toolbar>
-          <ListItem>
-            <Grid container justifyContent={'flex-start'}>
-              <Tab 
-                href='/'
-                label={'DH Odonto'} 
-                showLabel={true}
+    <AppBar>
+      <Toolbar sx={{my: 1}}>
+        {/* <ListItem>
+          <Grid container justifyContent="flex-start">
+            <Tab 
+              href='/'
+              label={'DH Odonto'}
+            />
+          </Grid>
+          <Grid container justifyContent="flex-end">
+            {navBar.map((item) => (
+              <Tab
+                key={item.id} 
+                label={item.label} 
+                href={item.path} 
+                icon={item.Icon}
               />
-            </Grid>
-            <Grid container justifyContent={'flex-end'}>
-              {navBar.map((item) => (
-                <Tab
-                  key={item.id} 
-                  label={item.label} 
-                  href={item.path} 
-                  icon={item.Icon} 
-                  showLabel={true}
-                />
-              ))}
-              <IconButton>
-                <LightIcon/>
-              </IconButton>
-            </Grid>
-          </ListItem>
-        </Toolbar>
-      </AppBar>
-    </ElevationScroll>
+            ))}
+            
+            <IconButton onClick={switchTheme} sx={{width: 60, height: 60}}>
+        \      { theme === 'light' ? <LightIcon/> : <DarkIcon/> }
+            </IconButton>
+          </Grid>
+        </ListItem> */}
+        <Link component={RouterLink} to="/" underline='none'>
+          <Typography variant="logo" color='secondary'>DH ODONTO</Typography>
+        </Link>
+
+        <Box sx={{ flexGrow: 1 }}></Box>
+
+        <Box>
+          {
+            navBar.map((item) => (
+              <Link key={item.id} component={RouterLink} to={item.path} underline='none'>
+                <Button color='info' sx={{minWidth: 80, ml: 1}} >
+                  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    {item.Icon}
+                    <Typography variant='navbarLink'>{item.label}</Typography>
+                  </Box>
+                </Button>
+              </Link>
+            ))
+          }
+          <IconButton color='info' onClick={switchTheme} sx={{width: 60, height: 60, ml: 1}}>
+            { theme === 'light' ? <LightIcon/> : <DarkIcon/> }
+          </IconButton>
+        </Box>
+      </Toolbar>
+    </AppBar>
   )
