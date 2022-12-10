@@ -22,8 +22,6 @@ export const Home = () => {
   return (
     <Grid 
       container 
-      padding={0} 
-      spacing={4} 
       justifyContent={'center'}
       alignItems={'center'}
     >
@@ -34,8 +32,10 @@ export const Home = () => {
       </Typography>
       <Grid 
         container
-        item xs={12}
+        xs={12}
         marginTop={4}
+        padding={8}
+        gap={3}
       >
         {
           data.map((item) => {

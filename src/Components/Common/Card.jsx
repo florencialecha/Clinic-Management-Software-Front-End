@@ -5,6 +5,9 @@ import { addFav } from "../utils/Storage";
 
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
+import { Button, Tab, Typography } from "@mui/material";
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import Stack from '@mui/material/Stack';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 const Card = ({ id, name, username }) => {
@@ -18,13 +21,30 @@ const Card = ({ id, name, username }) => {
   }
 
   return (
-    <Grid item xs={3}>
-      <Box border={0.5} padding={0.5}>
+    <Grid 
+      item 
+      xs={3}
+      border={0.5}
+      padding={1}
+    >
         <img src="./images/doctor.jpg" alt="Doctor" className="img-card"/>
-        <Link to={`/dentist/${id}`}>{name}nombre</Link>
-        <h4>{username}</h4>
-        <button onClick={handleClick} className="favButton">⭐ Add fav</button>
-      </Box>
+        <Grid 
+          container
+          flexDirection={'column'}
+          justifyContent={'center'}
+          borderColor={'secondary'}
+        >
+          <Tab href={`/dentist/${id}`} label={name} showLabel={true}/>
+          <Typography variant='subtitile' textAlign={'center'}>
+            {username}
+          </Typography>
+          <Stack direction="row" spacing={2}>
+            <Button variant="outlined" startIcon={<StarBorderIcon />} >
+              ADD FAV
+            </Button>
+          </Stack>
+        </Grid>
+
     </Grid>
   );
 };
