@@ -1,6 +1,6 @@
 
 import { Outlet } from "react-router-dom";
-import Navbar from "./Components/Common/Navbar";
+import { Navbar } from "./Components/Common/Navbar";
 import Footer from "./Components/Common/Footer";
 import Grid from '@mui/system/Unstable_Grid';
 

@@ -5,13 +5,13 @@ import AppRouter from './AppRouter';
 import ContextProvider from './Components/utils/global.context'
 
 import { ThemeProvider } from '@mui/material/styles';
-import { dashboardTheme } from './dashboardTheme';
+import { theme } from './Theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={dashboardTheme}>
+    <ThemeProvider theme={theme}>
       <ContextProvider>
         <AppRouter/>
       </ContextProvider>

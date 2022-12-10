@@ -7,15 +7,21 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import ListItem from '@mui/material/ListItem';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 const Footer = () => {
   return (
     <AppBar position="static">
       <Toolbar variant="dense">
         <Box>
-          <a href="#top">Scroll to up</a>
+          <Button href="#top">
+            <h3>Scroll to up</h3>
+          </Button>
         </Box>
-        <img src="./images/DH.png" alt='DH-logo' className='img-logo-dh' />
+        <Toolbar disableGutters>
+          <img src="./images/DH.png" alt='DH-logo' className='img-logo-dh' />
+        </Toolbar>
         <ListItem>
           
           <Box>
