@@ -39,11 +39,11 @@ const Form = () => {
   return (
     <div>
       <form noValidate onSubmit={handleSubmit}>
-        <input type="text" name="fullName" placeholder="Full name" onChange={handleChange} />
-        <input type="email" name="email" placeholder="E-mail" onChange={handleChange} />
+        <input type="text" id="fullName" name="fullName" placeholder="Full name" onChange={handleChange} role="fullName" />
+        <input type="email" did="email" name="email" placeholder="E-mail" onChange={handleChange} role="email" />
         <button type="submit" value="Submit" className="submit">Send</button>
       </form>
-      {submitMessage && <p>{submitMessage}</p>} 
+      {submitMessage && <p>{submitMessage}</p>}
     </div>
   );
   
