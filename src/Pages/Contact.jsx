@@ -2,6 +2,7 @@ import React from 'react'
 import Form from '../Components/Common/Form'
 
 import Grid from '@mui/material/Unstable_Grid2';
+import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import Paper from '@mui/material/Paper'
 import { red } from '@mui/material/colors';
@@ -10,10 +11,9 @@ import { red } from '@mui/material/colors';
 
 export const Contact = () => {
   return (
-    <Grid
-      container 
+    <Stack
+      spacing={5}
       padding={8} 
-      direction={'column'}
       margin={16}
     >
       <Paper 
@@ -33,6 +33,6 @@ export const Contact = () => {
         </Typography>
         <Form/>
       </Paper>
-    </Grid>
+    </Stack>
   )
 }

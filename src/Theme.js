@@ -1,10 +1,11 @@
+import common from '@mui/material/colors/common';
 import { createTheme } from '@mui/material/styles';
 import { Component } from 'react';
 
+const whiteDh = '#F9F1F3'
 const redDh = "#EB174B";
-const whiteDh = '#f3f2f5';
+const greyDh = '#4A4C4F';
 const blackDh ='#1A2E35';
-const greyDh = '4A4C4F';
 
 export const theme = createTheme({
 
@@ -12,17 +13,13 @@ export const theme = createTheme({
 
     // mode: 'dark',
     common: {
-      red: redDh,
       white: whiteDh,
       black: blackDh,
     },
     primary: {
-      main: whiteDh,
+      main: greyDh,
     },
     secondary: {
-      main: redDh,
-    },
-    info: {
       main: redDh,
     },
     contrastThreshold: 4,
@@ -30,6 +27,12 @@ export const theme = createTheme({
   },
 
   typography: {
+    styleOverrides: {
+      root: {
+        fontWeight: 200,
+        color: common.black,
+      },
+    },
     h3: {
       fontWeight: 500,
     },
@@ -42,6 +45,7 @@ export const theme = createTheme({
   },
 
   components: {
+    
     MuiButton: {
       variants: [
         {
@@ -57,7 +61,14 @@ export const theme = createTheme({
         }
       ]
     },
-  },
 
-});
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: common.white,
+        }
+      }
+    },
+
+}});
 
