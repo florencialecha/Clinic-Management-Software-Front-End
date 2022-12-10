@@ -24,28 +24,6 @@ export const Navbar = () => {
  return (
     <AppBar>
       <Toolbar sx={{my: 1}}>
-        {/* <ListItem>
-          <Grid container justifyContent="flex-start">
-            <Tab 
-              href='/'
-              label={'DH Odonto'}
-            />
-          </Grid>
-          <Grid container justifyContent="flex-end">
-            {navBar.map((item) => (
-              <Tab
-                key={item.id} 
-                label={item.label} 
-                href={item.path} 
-                icon={item.Icon}
-              />
-            ))}
-            
-            <IconButton onClick={switchTheme} sx={{width: 60, height: 60}}>
-        \      { theme === 'light' ? <LightIcon/> : <DarkIcon/> }
-            </IconButton>
-          </Grid>
-        </ListItem> */}
         <Link component={RouterLink} to="/" underline='none'>
           <Typography variant="logo" color='secondary'>DH ODONTO</Typography>
         </Link>
@@ -69,7 +47,9 @@ export const Navbar = () => {
             { theme === 'light' ? <LightIcon/> : <DarkIcon/> }
           </IconButton>
         </Box>
+
       </Toolbar>
     </AppBar>
   )
+
 }
