@@ -1,6 +1,5 @@
 import common from '@mui/material/colors/common';
 import { createTheme } from '@mui/material/styles';
-import { Component } from 'react';
 
 const whiteDh = '#F9F1F3'
 const redDh = "#EB174B";
