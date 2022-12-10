@@ -7,6 +7,9 @@ const blackDh ='#1A2E35';
 export const theme = createTheme({
 
   palette: {
+
+    mode: 'dark',
+    
     common: {
       red: redDh,
       white: whiteDh,

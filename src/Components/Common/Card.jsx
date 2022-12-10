@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { addFav } from "../utils/Storage";
 
 import Grid from '@mui/material/Unstable_Grid2';
-import Box from '@mui/material/Box';
 import { Button, Tab, Typography } from "@mui/material";
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import Stack from '@mui/material/Stack';
@@ -39,12 +38,11 @@ const Card = ({ id, name, username }) => {
             {username}
           </Typography>
           <Stack direction="row" spacing={2}>
-            <Button variant="outlined" startIcon={<StarBorderIcon />} >
+            <Button variant="outlined" startIcon={<StarBorderIcon />} color={'secondary'} >
               ADD FAV
             </Button>
           </Stack>
         </Grid>
-
     </Grid>
   );
 };
