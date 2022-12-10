@@ -54,8 +54,8 @@ export const Navbar = () => {
                   showLabel={true}
                 />
               ))}
-              <IconButton sx={{ ml: 1 }} color="inherit">
-                <LightIcon />
+              <IconButton>
+                <LightIcon/>
               </IconButton>
             </Grid>
           </ListItem>
