@@ -17,14 +17,12 @@ export const Theme = theme => createTheme({
             black: blackDh,
         },
         primary: {
-            main: whiteDh,
+            main: greyDh,
             light: whiteDh,
             dark: blackDh,
         },
         secondary: {
             main: redDh,
-            light: whiteDh,
-            dark: blackDh,
         },
         contrastThreshold: 4,
         tonalOffset: 0.5,
@@ -58,14 +56,11 @@ export const Theme = theme => createTheme({
     MuiButton: {
       variants: [
         {
-          props: {variant: 'red-btn'},
+          props: {variant: 'red-button'},
           style: {
             backgroundColor: redDh,
             color: whiteDh,
             fullWidth: true,
-            ':hover': {
-              bgcolor: greyDh,
-            }
           },
         }
       ]

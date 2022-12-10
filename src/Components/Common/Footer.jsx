@@ -9,14 +9,14 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { red } from '@mui/material/colors';
+
 
 const Footer = () => {
 
 
   return (
     <footer>
-      <Grid 
+      <Grid color='primary'
         container
         direction='column'
       >
@@ -26,7 +26,7 @@ const Footer = () => {
             justifyContent="center" 
           >
             <Button 
-              variant='red-btn'
+              variant='red-button'
               href="#top" 
               startIcon={<KeyboardArrowUpIcon fontSize='large'/>}
               endIcon={<KeyboardArrowUpIcon fontSize='large'/>}
