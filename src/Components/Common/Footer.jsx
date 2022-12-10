@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { red } from '@mui/material/colors';
 
 const Footer = () => {
 
@@ -17,51 +18,46 @@ const Footer = () => {
     <footer className='theme.footer'>
       <Grid 
         container
-        justifyContent="center" 
+        direction='column'
       >
-        <Grid 
-          item
-          // width={'100%'}
-        >
-          <Button 
-            variant='red-btn'
-            href="#top" 
-            startIcon={<KeyboardArrowUpIcon fontSize='large'/>}
-            endIcon={<KeyboardArrowUpIcon fontSize='large'/>}
+        <Grid item>
+          <Grid container 
+            width={'100%'}
+            justifyContent="center" 
           >
-            <Typography variant='h5'>
-              Scroll to up
-            </Typography>
-          </Button>
+            <Button 
+              variant='red-btn'
+              href="#top" 
+              startIcon={<KeyboardArrowUpIcon fontSize='large'/>}
+              endIcon={<KeyboardArrowUpIcon fontSize='large'/>}
+            >
+              <Typography variant='h5'>
+                Scroll to up
+              </Typography>
+            </Button>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Grid container 
+              alignItems='center'
+              direction='row'
+          >
+            <Toolbar disableGutters justifyContent='flex-start' >
+              <img src="./images/DH.png" alt='DH-logo' className='img-logo-dh' />
+            </Toolbar>
+            <ListItem justifyContent='flex-end'>
+                {footer.map((item) => (
+                  <BottomNavigationAction 
+                    key={item.id} 
+                    label={item.label} 
+                    href={item.route} 
+                    icon={item.Icon} 
+                  />
+                ))}
+            </ListItem>
+          </Grid>
         </Grid>
       </Grid>
-
-
-
-
-      {/* <Toolbar variant="dense">
-        <Box>
-          <Button href="#top">
-            <h3>Scroll to up</h3>
-          </Button>
-        </Box>
-        <Toolbar disableGutters>
-          <img src="./images/DH.png" alt='DH-logo' className='img-logo-dh' />
-        </Toolbar>
-        <ListItem>
-          
-          <Grid item>
-            {footer.map((item) => (
-              <BottomNavigationAction 
-                key={item.id} 
-                label={item.label} 
-                href={item.route} 
-                icon={item.Icon} 
-              />
-            ))}
-          </Grid>
-        </ListItem>
-      </Toolbar> */}
     </footer>
   )
 }
