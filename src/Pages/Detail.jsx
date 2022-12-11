@@ -35,7 +35,7 @@ export const Detail = () => {
 
   return (
       <Stack alignItems="center" paddingY={4} spacing={3}>
-        <Typography variant={'h3'} align="center">
+        <Typography variant={'h3'} color="secondary" align="center">
           Dentist Detail
         </Typography>
         <Stack sx={{maxWidth: 600, p: 3, borderStyle: 'solid', borderWidth: 1, borderColor: 'lightgray'}} spacing={3} alignItems="center">

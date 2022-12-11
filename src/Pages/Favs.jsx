@@ -19,7 +19,7 @@ export const Favs = () => {
 
   return (
     <Stack paddingY={4} spacing={2}>
-      <Typography variant={'h3'} align="center">
+      <Typography variant={'h3'} color="secondary" align="center">
         Dentists Favs
       </Typography>
       <Grid container spacing={3}>
