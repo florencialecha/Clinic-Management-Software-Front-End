@@ -22,7 +22,7 @@ export const Navbar = () => {
   };
 
  return (
-    <AppBar>
+    <AppBar position="sticky">
       <Toolbar sx={{my: 1}}>
         <Link component={RouterLink} to="/" underline='none'>
           <Typography variant="logo" color='secondary'>DH ODONTO</Typography>
@@ -34,7 +34,7 @@ export const Navbar = () => {
           {
             navBar.map((item) => (
               <Link key={item.id} component={RouterLink} to={item.path} underline='none'>
-                <Button color='info' sx={{minWidth: 80, ml: 1}} >
+                <Button color='secondary' sx={{minWidth: 80, ml: 1}} >
                   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     {item.Icon}
                     <Typography variant='navbarLink'>{item.label}</Typography>
@@ -43,7 +43,7 @@ export const Navbar = () => {
               </Link>
             ))
           }
-          <IconButton color='info' onClick={switchTheme} sx={{width: 60, height: 60, ml: 1}}>
+          <IconButton color='secondary' onClick={switchTheme} sx={{width: 60, height: 60, ml: 1}}>
             { theme === 'light' ? <LightIcon/> : <DarkIcon/> }
           </IconButton>
         </Box>

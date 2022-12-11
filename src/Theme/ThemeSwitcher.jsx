@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@mui/material"
+import { CssBaseline, ThemeProvider } from "@mui/material"
 import { useEffect } from "react";
 import { useState } from "react";
 import { useContext } from "react";
@@ -16,6 +16,7 @@ export const ThemeSwitcher = ({ children }) => {
     }, [theme]);
 
     return <ThemeProvider theme={appTheme}>
+        <CssBaseline />
         {children}
     </ThemeProvider>
 }

@@ -16,7 +16,7 @@ export const findInternalRouteByLabel = (label) => internalRoutes.find((route) =
 export const findExternalRouteByLabel = (label) => externalRoutes.find((route) => route.label === label); 
 
 export const internalRoutes = [
-  { id: 1, path: "/", Icon: <HomeIcon />, Element: Home, label: "Index" },
+  { id: 1, path: "/", Icon: <HomeIcon color="secondary" />, Element: Home, label: "Index" },
   { id: 2, path: "/home", Icon: <HomeIcon />, Element: Home, label: "Home" },
   { id: 3, path: "/contact", Icon: <EmailIcon />, Element: Contact, label: "Contact" },
   { id: 4, path: "/favs", Icon: <GradeIcon />, Element: Favs, label: "Favs" },
@@ -25,9 +25,9 @@ export const internalRoutes = [
 ];
 
 export const externalRoutes = [
-  { id: 1, icon: <FacebookIcon color='info'/>, label: 'Facebook', route: 'https://www.facebook.com/', },
-  { id: 2, icon: <InstagramIcon color='info'/>, label: 'Instagram', route: 'https://www.instagram.com/', },
-  { id: 3, icon: <WhatsAppIcon color='info'/>, label: 'WhatsApp', route: 'https://www.whatsapp.com/', },
-  { id: 4, icon: <MusicNoteIcon color='info'/>, label: 'TikTok', route: 'https://www.tiktok.com/en/', },
-  { id: 5, icon: '', label: 'DigitalHouse', route: 'https://www.digitalhouse.com/', },
+  { id: 1, Icon: <FacebookIcon />, label: 'Facebook', route: 'https://www.facebook.com/', },
+  { id: 2, Icon: <InstagramIcon />, label: 'Instagram', route: 'https://www.instagram.com/', },
+  { id: 3, Icon: <WhatsAppIcon />, label: 'WhatsApp', route: 'https://www.whatsapp.com/', },
+  { id: 4, Icon: <MusicNoteIcon />, label: 'TikTok', route: 'https://www.tiktok.com/en/', },
+  { id: 5, Icon: '', label: 'DigitalHouse', route: 'https://www.digitalhouse.com/', },
 ];

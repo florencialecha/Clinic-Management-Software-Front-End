@@ -1,29 +1,48 @@
 import { createTheme } from "@mui/material";
 import common from '@mui/material/colors/common';
 
-const whiteDh = '#F9F1F3'
-const redDh = "#EB174B";
-const greyDh = '#4A4C4F';
-const blackDh ='#1A2E35';
+const whiteDh = '#F8F8F8'
+const redDh = '#EB174B';
+const blackDh ='#1D1E20';
+const greyDh ='#3A3B41';
+
+const lightPalette = {
+    primary: {
+        main: whiteDh,
+    },
+    secondary: {
+        main: blackDh,
+    },
+    info: {
+        main: redDh,
+    }
+}
+
+const darkPalette = {
+    primary: {
+        main: blackDh,
+    },
+    secondary: {
+        main: whiteDh,
+    },
+    info: {
+        main: redDh,
+    }
+}
 
 export const Theme = theme => createTheme({
 
     palette: {
 
-        mode: theme,
+        ...(theme === 'light'
+            ? lightPalette
+            : darkPalette
+        ),
 
-        common: {
-            white: whiteDh,
-            black: blackDh,
+        background: {
+            default: theme === 'light' ? whiteDh : greyDh
         },
-        primary: {
-            main: greyDh,
-            light: whiteDh,
-            dark: blackDh,
-        },
-        secondary: {
-            main: redDh,
-        },
+        
         contrastThreshold: 4,
         tonalOffset: 0.5,
 
@@ -48,32 +67,48 @@ export const Theme = theme => createTheme({
             fontSize: 20,
         },
 
+
     },
 
-    
     components: {
+
+        MuiButton: {
+            variants: [
+                {
+                    props: {variant: 'red-button'},
+                    style: {
+                        width: '100%',
+                        backgroundColor: redDh,
+                        color: whiteDh,
+                        ":hover": {
+                            backgroundColor: redDh
+                        }
+                    },
+                },
+                {
+                    props: {variant: 'fullwidth-button'},
+                    style: {
+                        width: '100%',
+                        backgroundColor: redDh,
+                        color: whiteDh,
+                        ":hover": {
+                            backgroundColor: redDh
+                        }
+                    },
+                },
+            ]
+        },
+        
+        MuiTable: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: theme === 'light' ? whiteDh : blackDh,
+                }
+            }
+        }
+
+    },
+
     
-    MuiButton: {
-      variants: [
-        {
-          props: {variant: 'red-button'},
-          style: {
-            backgroundColor: redDh,
-            color: whiteDh,
-            fullWidth: true,
-          },
-        }
-      ]
-    },
-
-    MuiAppBar: {
-      styleOverrides: {
-        root: {
-          backgroundColor: common.white,
-        }
-      }
-    },
-
-    },
 
 })

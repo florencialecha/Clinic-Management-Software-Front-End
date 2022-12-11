@@ -1,3 +1,5 @@
+import { Button, Input, TextField, Typography } from "@mui/material";
+import { Stack } from "@mui/system";
 import React from "react";
 import { useState } from "react";
 import useForm from "../../Hooks/useForm";
@@ -39,11 +41,17 @@ const Form = () => {
   return (
     <div>
       <form noValidate onSubmit={handleSubmit}>
-        <input type="text" id="fullName" name="fullName" placeholder="Full name" onChange={handleChange} role="fullName" />
-        <input type="email" did="email" name="email" placeholder="E-mail" onChange={handleChange} role="email" />
-        <button type="submit" value="Submit" className="submit">Send</button>
+        <Stack spacing={3}>
+          <TextField inputProps={{style: {color: 'secondary'}}} variant="outlined" color="secondary" type="text" name="fullName" placeholder="Full name" onChange={handleChange} role="fullName"></TextField>
+          <TextField variant="outlined" color="secondary" type="email" name="email" placeholder="Email" onChange={handleChange} role="email"></TextField>
+          <Button type="submit" value="Submit" color="secondary" size="large" variant="red-button">
+            <Typography variant="h5">Send</Typography>
+          </Button>
+          <Typography variant="subtitle" color="secondary">
+            {submitMessage && <p>{submitMessage}</p>}
+          </Typography>
+        </Stack>
       </form>
-      {submitMessage && <p>{submitMessage}</p>}
     </div>
   );
   
