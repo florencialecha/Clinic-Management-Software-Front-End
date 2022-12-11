@@ -1,17 +1,18 @@
 
 import { Outlet } from "react-router-dom";
+import { Navbar } from "./Components/Common/Navbar";
+import Footer from "./Components/Common/Footer";
+import { ThemeSwitcher } from "./Theme/ThemeSwitcher";
+import { Container } from "@mui/material";
 
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
-
-function App() {
+export function App() {
   return (
-      <div className="App">
-        <Navbar/>
+    <ThemeSwitcher>
+      <Navbar/>
+      <Container>
         <Outlet/>
-        <Footer/>
-      </div>
+      </Container>
+      <Footer/>
+    </ThemeSwitcher>
   );
 }
-
-export default App;
