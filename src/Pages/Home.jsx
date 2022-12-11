@@ -22,7 +22,7 @@ export const Home = () => {
 
   return (
     <Stack paddingY={4} spacing={2}>
-      <Typography variant={'h3'} align="center">
+      <Typography variant={'h3'} color="secondary" align="center">
         Home
       </Typography>
       <Grid container spacing={3}>
