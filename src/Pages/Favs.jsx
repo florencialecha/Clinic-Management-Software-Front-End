@@ -6,6 +6,8 @@ import { getFavs } from "../Components/utils/Storage";
 import Card from "../Components/Common/Card";
 
 import Grid from '@mui/system/Unstable_Grid';
+import { Typography } from "@mui/material";
+import { Stack } from "@mui/system";
 
 export const Favs = () => {
 
@@ -16,19 +18,23 @@ export const Favs = () => {
   }, []);
 
   return (
-    <Grid>
-      <h1>Dentists Favs</h1>
-      <Grid container spacing={5}>
-        {
-          favs.map((fav) => 
-            <Card 
-              key={fav.id}
-              id={fav.id} 
-              name={fav.name} 
-              username={fav.username} 
-            />)
-        }
+    <Stack paddingY={4} spacing={2}>
+      <Typography variant={'h3'} align="center">
+        Dentists Favs
+      </Typography>
+      <Grid container spacing={3}>
+          {
+            favs.map((fav) => 
+              <Grid key={fav.id} xs={12} sm={6} md={4} lg={3}>
+                <Card
+                  id={fav.id} 
+                  name={fav.name} 
+                  username={fav.username} 
+                />
+              </Grid>
+            )
+          }
       </Grid>
-    </Grid>
+    </Stack>
   );
 };

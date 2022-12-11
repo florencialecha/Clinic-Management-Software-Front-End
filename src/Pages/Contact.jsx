@@ -12,26 +12,23 @@ import { red } from '@mui/material/colors';
 export const Contact = () => {
   return (
     <Stack
-      spacing={5}
-      padding={8} 
-      margin={16}
+      spacing={3}
+      paddingX={8} 
+      marginY={4}
     >
-      <Paper 
-        variant="outlined"
-        margin={10}
+      <Typography 
+        variant={'h3'}
+        color='secondary'
       >
-        <Typography 
-          variant={'h3'}
-        >
-          Want to know more?
-        </Typography>
-        <Typography
-          variant={'h5'}
-        >
-          Send us your questions and we will contact you
-        </Typography>
-        <Form/>
-      </Paper>
+        Want to know more?
+      </Typography>
+      <Typography
+        variant={'h5'}
+        color='secondary'
+      >
+        Send us your questions and we will contact you
+      </Typography>
+      <Form/>
     </Stack>
   )
 }

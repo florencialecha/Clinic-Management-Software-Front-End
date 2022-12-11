@@ -25,9 +25,9 @@ export const internalRoutes = [
 ];
 
 export const externalRoutes = [
-  { id: 1, icon: <FacebookIcon color='info'/>, label: 'Facebook', route: 'https://www.facebook.com/', },
-  { id: 2, icon: <InstagramIcon color='info'/>, label: 'Instagram', route: 'https://www.instagram.com/', },
-  { id: 3, icon: <WhatsAppIcon color='info'/>, label: 'WhatsApp', route: 'https://www.whatsapp.com/', },
-  { id: 4, icon: <MusicNoteIcon color='info'/>, label: 'TikTok', route: 'https://www.tiktok.com/en/', },
-  { id: 5, icon: '', label: 'DigitalHouse', route: 'https://www.digitalhouse.com/', },
+  { id: 1, Icon: <FacebookIcon />, label: 'Facebook', route: 'https://www.facebook.com/', },
+  { id: 2, Icon: <InstagramIcon />, label: 'Instagram', route: 'https://www.instagram.com/', },
+  { id: 3, Icon: <WhatsAppIcon />, label: 'WhatsApp', route: 'https://www.whatsapp.com/', },
+  { id: 4, Icon: <MusicNoteIcon />, label: 'TikTok', route: 'https://www.tiktok.com/en/', },
+  { id: 5, Icon: '', label: 'DigitalHouse', route: 'https://www.digitalhouse.com/', },
 ];

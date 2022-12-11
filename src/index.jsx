@@ -4,17 +4,13 @@ import './index.css';
 import AppRouter from './AppRouter';
 import ContextProvider from './Components/utils/global.context'
 
-import CssBaseline from '@mui/material/CssBaseline';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-      <CssBaseline>
-        <ContextProvider>
-          <AppRouter/>
-        </ContextProvider>
-      </CssBaseline>
+    <ContextProvider>
+      <AppRouter/>
+    </ContextProvider>
   </React.StrictMode>
 );
 
