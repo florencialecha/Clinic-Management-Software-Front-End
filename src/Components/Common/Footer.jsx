@@ -24,7 +24,7 @@ const Footer = () => {
           Scroll to up
         </Typography>
       </Button>
-      <Box sx={{backgroundColor: 'primary.main', p: 2}}>
+      {/* <Box sx={{backgroundColor: 'primary.main', p: 2}}> */}
         <Toolbar>
           <img src="./images/DH.png" alt='DH-logo' className='img-logo-dh' style={{width: 200}} />
           <Stack direction="row" spacing={2}>
@@ -39,7 +39,7 @@ const Footer = () => {
             ))}
           </Stack>
         </Toolbar>
-      </Box>
+      {/* </Box> */}
     </Stack>
   )
 }
