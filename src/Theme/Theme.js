@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material";
-import common from '@mui/material/colors/common';
 
 const whiteDh = '#F8F8F8'
 const redDh = '#EB174B';
