@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-import Grid from '@mui/system/Unstable_Grid';
-import { Container, Paper, styled, Table, TableBody, TableCell, tableCellClasses, TableContainer, TableRow, Typography } from '@mui/material';
+import { Paper, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
@@ -18,7 +17,7 @@ export const Detail = () => {
   useEffect(() => {
     axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
       .then((res) => setData(res.data))
-  }, []);
+  }, [ id ]);
 
   if (!data) {
     return;
