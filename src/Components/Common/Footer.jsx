@@ -13,7 +13,7 @@ const Footer = () => {
 
 
   return (
-    <Stack direction="row" spacing={2}>
+    <Stack direction={'column'}>
       <Button 
         variant='red-button'
         href="#top" 
@@ -24,10 +24,9 @@ const Footer = () => {
           Scroll to up
         </Typography>
       </Button>
-      {/* <Box sx={{backgroundColor: 'primary.main', p: 2}}> */}
-      <Toolbar>
+      <Stack padding={'24px'}  direction={'row'} justifyContent={'space-between'}>
         <img src="./images/DH.png" alt='DH-logo' className='img-logo-dh' style={{width: 200}} />
-        <Stack direction="row" spacing={2}>
+        <Stack direction={'row'} spacing={2}>
           {footer.map((item) => (
             <IconButton
               color='secondary'
@@ -38,8 +37,7 @@ const Footer = () => {
             </IconButton>
           ))}
         </Stack>
-      </Toolbar>
-      {/* </Box> */}
+      </Stack>
     </Stack>
   )
 }
