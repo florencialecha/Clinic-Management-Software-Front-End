@@ -13,7 +13,7 @@ const Footer = () => {
 
 
   return (
-    <Stack position={'fixed'}>
+    <Stack direction="row" spacing={2} position={'fixed'}>
       <Button 
         variant='red-button'
         href="#top" 
