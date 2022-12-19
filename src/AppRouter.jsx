@@ -5,7 +5,7 @@ import { App } from './App'
 
 const AppRouter = () => {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="https://florencialecha.github.io/ctd-esp-fe3-final">
         <Routes>
           <Route element={<App/>}>
             {internalRoutes.map(({ id, path, Element }) => (<Route key={id} path={path} element={<Element/>}/>))}
