@@ -13,23 +13,20 @@ const Footer = () => {
 
 
   return (
-
-    <footer>
+    <Stack position={'fixed'}>
+      <Button 
+        variant='red-button'
+        href="#top" 
+        startIcon={<KeyboardArrowUpIcon fontSize='large'/>}
+        endIcon={<KeyboardArrowUpIcon fontSize='large'/>}
+      >
+        <Typography variant='h5'>
+          Scroll to up
+        </Typography>
+      </Button>
       <Box sx={{backgroundColor: 'primary.main', p: 2}}>
         <Toolbar>
           <img src="./images/DH.png" alt='DH-logo' className='img-logo-dh' style={{width: 200}} />
-
-          <Box sx={{ flexGrow: 1 }}></Box>
-          <Button 
-            variant='red-button'
-            href="#top" 
-            startIcon={<KeyboardArrowUpIcon fontSize='large'/>}
-            endIcon={<KeyboardArrowUpIcon fontSize='large'/>}
-          >
-            <Typography variant='h5'>
-              Scroll to up
-            </Typography>
-          </Button>
           <Stack direction="row" spacing={2}>
             {footer.map((item) => (
               <IconButton
@@ -41,11 +38,9 @@ const Footer = () => {
               </IconButton>
             ))}
           </Stack>
-          
         </Toolbar>
       </Box>
-    </footer>
-
+    </Stack>
   )
 }
 

@@ -6,7 +6,6 @@ import { ContextGlobal } from '../Components/utils/global.context'
 
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2';
-import { palette } from '@mui/system'
 import { Stack } from '@mui/material'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
