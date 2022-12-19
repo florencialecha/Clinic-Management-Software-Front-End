@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ctd-esp-fe3-final/static/css/main.af7b2066.css",
+    "main.js": "/ctd-esp-fe3-final/static/js/main.69b407fc.js",
+    "index.html": "/ctd-esp-fe3-final/index.html",
+    "main.af7b2066.css.map": "/ctd-esp-fe3-final/static/css/main.af7b2066.css.map",
+    "main.69b407fc.js.map": "/ctd-esp-fe3-final/static/js/main.69b407fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af7b2066.css",
+    "static/js/main.69b407fc.js"
+  ]
+}
