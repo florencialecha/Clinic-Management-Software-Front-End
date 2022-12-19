@@ -3,7 +3,6 @@ import React from 'react'
 import { footer } from '../../Routes/FooterItems'
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Grid from '@mui/material/Unstable_Grid2';
 import { Stack } from '@mui/system';
 import { IconButton } from '@mui/material';
 import { Button } from '@mui/material';
@@ -14,22 +13,20 @@ const Footer = () => {
 
 
   return (
-    <Grid position={'fixed'}>
+    <Stack position={'fixed'}>
+      <Button 
+        variant='red-button'
+        href="#top" 
+        startIcon={<KeyboardArrowUpIcon fontSize='large'/>}
+        endIcon={<KeyboardArrowUpIcon fontSize='large'/>}
+      >
+        <Typography variant='h5'>
+          Scroll to up
+        </Typography>
+      </Button>
       <Box sx={{backgroundColor: 'primary.main', p: 2}}>
         <Toolbar>
           <img src="./images/DH.png" alt='DH-logo' className='img-logo-dh' style={{width: 200}} />
-
-          <Box sx={{ flexGrow: 1 }}></Box>
-          <Button 
-            variant='red-button'
-            href="#top" 
-            startIcon={<KeyboardArrowUpIcon fontSize='large'/>}
-            endIcon={<KeyboardArrowUpIcon fontSize='large'/>}
-          >
-            <Typography variant='h5'>
-              Scroll to up
-            </Typography>
-          </Button>
           <Stack direction="row" spacing={2}>
             {footer.map((item) => (
               <IconButton
@@ -41,10 +38,9 @@ const Footer = () => {
               </IconButton>
             ))}
           </Stack>
-          
         </Toolbar>
       </Box>
-    </Grid>
+    </Stack>
   )
 }
 
