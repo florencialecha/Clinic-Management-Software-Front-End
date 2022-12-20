@@ -11,7 +11,7 @@ const Footer = () => {
 
 
   return (
-    <Stack direction={'column'} position='sticky'>
+    <Stack direction={'column'}>
       <Button 
         variant='red-button'
         href="#top" 
