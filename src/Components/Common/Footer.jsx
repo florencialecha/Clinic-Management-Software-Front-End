@@ -1,8 +1,6 @@
 import React from 'react'
 
 import { footer } from '../../Routes/FooterItems'
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import { Stack } from '@mui/system';
 import { IconButton } from '@mui/material';
 import { Button } from '@mui/material';
@@ -13,7 +11,7 @@ const Footer = () => {
 
 
   return (
-    <Stack direction={'column'}>
+    <Stack direction={'column'} position='sticky'>
       <Button 
         variant='red-button'
         href="#top" 
