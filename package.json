@@ -1,7 +1,7 @@
 {
   "name": "final-solution",
   "version": "0.1.0",
-  "homepage": "https://florencialecha.github.io/ctd-esp-fe3-final",
+  "homepage": "https://florencialecha.github.io/Clinic-Management-Software-Back-End/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
