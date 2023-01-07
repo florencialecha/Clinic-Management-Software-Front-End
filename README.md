@@ -1,7 +1,7 @@
 # Front-End to Clinic Management Software
 
 Appointment booking system for a dental clinic. Project done for the Front-End III subject, part of the Certified Tech Developer course taken at Digital House.
-Co-created with Jonathan Umpierrez from the Base Repository provided by the subject's professor.
+Co-created with Jonathan Umpiérrez from the Base Repository provided by the subject's professor.
 
 ## Requirements: 
 - Comply with all mandatory functionalities.
