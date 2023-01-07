@@ -3,7 +3,7 @@
 Appointment booking system for a dental clinic. Project done for the Front-End III subject, part of the Certified Tech Developer course taken at Digital House.
 Co-created with Jonathan Umpiérrez from the Base Repository provided by the subject's professor.
 
-**Deployment:** [https://florencialecha.github.io/Clinic-Management-Software-Back-End/](https://florencialecha.github.io/Clinic-Management-Software-Front-End/)
+**Deployment:** [https://florencialecha.github.io/Clinic-Management-Software-Front-End/](https://florencialecha.github.io/Clinic-Management-Software-Front-End/)
 
 ## Requirements: 
 - Comply with all mandatory functionalities.
